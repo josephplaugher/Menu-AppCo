@@ -1,35 +1,28 @@
 import React from "react";
-import { backgroundDimmer, lightBox, close } from "./style.js";
+import { menuBody, close } from "./style.js";
 
-class LightBox extends React.Component {
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    // if this.prop.backgroundDimmer is not specified, set the default of 0.2
-    var transparency = "";
-    if (typeof this.props.backgroundDimmer !== "undefined") {
-      transparency = this.props.backgroundDimmer;
-    } else {
-      transparency = "0.2";
-    }
-
     return (
       <>
-        <div id="_lb-background" style={backgroundDimmer(transparency)}>
-          {/*this div intentionally empty. Sets the background dimm level*/}
-        </div>
-        <Draggable>
-          {" "}
-          {/*makes the lightbox draggable*/}
-          <div id="_lb-body" style={lightBox(this.props.style)}>
-            <span style={close} onClick={this.props.close}>
+        {this.props.showMenu ? (
+          <div
+            id="menu-appco_body"
+            style={menuBody(this.props.style, this.props.showMenu)}
+          >
+            <span style={close} onClick={this.props.closeHandler}>
               x
             </span>
             {this.props.children}{" "}
             {/*there must be nested markup components passed in*/}
           </div>
-        </Draggable>
+        ) : null}
       </>
     );
   }
 }
 
-export default LightBox;
+export default Menu;

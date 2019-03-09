@@ -1,40 +1,61 @@
-const backgroundDimmer = transparency => {
-  const style = {
-    position: "absolute",
-    margin: "0 auto",
-    top: "0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    zIndex: "5",
-    backgroundColor: `rgba(0,0,0,0.${transparency})` /*dim the background*/
-  };
-  if (transparency === "0") {
-    delete style.backgroundColor;
+const menuBody = (style, showMenu) => {
+  var changeWidth;
+  if (showMenu === true) {
+    changeWidth = "30%";
+  } else {
+    changeWidth = "0%";
   }
-  return style;
-};
-
-const lightBox = style => {
-  const lightBox = {
+  let styleObj = {
     zIndex: style.zIndex || "10",
-    margin: style.margin || "25px auto auto auto",
-    padding: style.padding || "25px",
-    width: style.width || "600px",
+    transition: "0.15s",
+    transitionProperty: "width",
+    position: "fixed",
+    margin: style.margin || "0px",
+    padding: style.padding || "5px",
+    width: changeWidth,
     height: style.height || "80%",
+    color: style.color || "black",
     backgroundColor: style.backgroundColor || "white",
     borderRadius: style.borderRadius || "5px",
     borderColor: style.borderColor || "#2665c4",
     borderStyle: style.borderStyle || "solid",
     borderWidth: style.borderWidth || "3px"
   };
-  return lightBox;
+  return styleObj;
 };
 
 const close = {
   float: "right",
   padding: "10px",
-  cursor: "pointer"
+  fontSize: "30px",
+  cursor: "pointer",
+  color: "black"
 };
 
-export { backgroundDimmer, lightBox, close };
+const menuButton = style => {
+  let styleObj = {
+    float: style.float || "right",
+    padding: style.padding || "10px",
+    cursor: style.cursor || "pointer"
+  };
+  return styleObj;
+};
+
+const bar = {
+  width: "20px",
+  height: "3px",
+  backgroundColor: "white",
+  margin: "3px 0"
+};
+
+// const bar = style => {
+//   let styleObj = {
+//     width: style.width || "20px",
+//     height: style.height || "3px",
+//     backgroundColor: style.backgroundColor || "white",
+//     margin: style.margin || "3px 0"
+//   };
+//   return styleObj;
+// };
+
+export { menuBody, close, menuButton, bar };

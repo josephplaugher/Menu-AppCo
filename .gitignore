@@ -3,3 +3,6 @@ node_modules
 
 #transpiled code
 dist
+
+#npm background files
+package-lock.json

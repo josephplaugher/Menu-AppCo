@@ -1,3 +1,4 @@
 import Menu from "./src/Menu";
+import MenuButton from "./src/MenuButton";
 
-export default Menu;
+export { Menu, MenuButton };
