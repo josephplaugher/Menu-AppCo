@@ -1,7 +1,7 @@
 const menuBody = (style, showMenu) => {
   var changeWidth;
   if (showMenu === true) {
-    changeWidth = "30%";
+    changeWidth = style.width || "30%";
   } else {
     changeWidth = "0%";
   }
