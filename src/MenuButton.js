@@ -10,9 +10,9 @@ class MenuButton extends React.Component {
           onClick={this.props.onClick}
           style={menuButton(this.props.style)}
         >
-          <div style={bar} />
-          <div style={bar} />
-          <div style={bar} />
+          <div style={bar(this.props.barStyle)} />
+          <div style={bar(this.props.barStyle)} />
+          <div style={bar(this.props.barStyle)} />
         </div>
       </>
     );

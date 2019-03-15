@@ -6,6 +6,12 @@ class Menu extends React.Component {
     super(props);
   }
   render() {
+    let closeIcon;
+    if (typeof this.props.closeIcon !== "undefined") {
+      closeIcon = this.props.closeIcon;
+    } else {
+      closeIcon = "X";
+    }
     return (
       <>
         {this.props.showMenu ? (
@@ -14,7 +20,7 @@ class Menu extends React.Component {
             style={menuBody(this.props.style, this.props.showMenu)}
           >
             <span style={close} onClick={this.props.closeHandler}>
-              x
+              {closeIcon}
             </span>
             {this.props.children}{" "}
             {/*there must be nested markup components passed in*/}

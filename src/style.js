@@ -9,17 +9,17 @@ const menuBody = (style, showMenu) => {
     zIndex: style.zIndex || "10",
     transition: "0.15s",
     transitionProperty: "width",
-    position: "fixed",
+    position: "relative",
     margin: style.margin || "0px",
     padding: style.padding || "5px",
     width: changeWidth,
-    height: style.height || "80%",
+    height: style.height || "100px",
     color: style.color || "black",
     backgroundColor: style.backgroundColor || "white",
     borderRadius: style.borderRadius || "5px",
-    borderColor: style.borderColor || "#2665c4",
+    borderColor: style.borderColor || "black",
     borderStyle: style.borderStyle || "solid",
-    borderWidth: style.borderWidth || "3px"
+    borderWidth: style.borderWidth || "2px"
   };
   return styleObj;
 };
@@ -27,7 +27,7 @@ const menuBody = (style, showMenu) => {
 const close = {
   float: "right",
   padding: "10px",
-  fontSize: "30px",
+  fontSize: "15px",
   cursor: "pointer",
   color: "black"
 };
@@ -35,17 +35,20 @@ const close = {
 const menuButton = style => {
   let styleObj = {
     float: style.float || "right",
-    padding: style.padding || "10px",
+    padding: style.padding || "10pxs",
     cursor: style.cursor || "pointer"
   };
   return styleObj;
 };
 
-const bar = {
-  width: "20px",
-  height: "3px",
-  backgroundColor: "white",
-  margin: "3px 0"
+const bar = style => {
+  let styleObj = {
+    width: style.width || "20px",
+    height: style.height || "3px",
+    backgroundColor: style.backgroundColor || "black",
+    margin: style.margin || "3px 0"
+  };
+  return styleObj;
 };
 
 // const bar = style => {
