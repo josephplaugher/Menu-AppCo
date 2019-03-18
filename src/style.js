@@ -7,7 +7,7 @@ const menuBody = (style, showMenu) => {
   }
   let styleObj = {
     zIndex: style.zIndex || "10",
-    transition: "0.15s",
+    transition: style.transition || "0.15s",
     transitionProperty: "width",
     position: "relative",
     margin: style.margin || "0px",
