@@ -1,4 +1,4 @@
-#Menu-AppCo is a full featured menu component. Usages instructions to come.
+#Menu-AppCo is a full featured menu component.
 
 ######Installation
 
