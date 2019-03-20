@@ -1,12 +1,12 @@
-#Menu-AppCo is a full featured menu component.
+Menu-AppCo is a simple stylable menu component.
 
-######Installation
+Installation
 
 ```
 npm install menu-appco
 ```
 
-######Usage
+Usage
 
 ```
 import React from "react";
