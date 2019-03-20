@@ -51,14 +51,4 @@ const bar = style => {
   return styleObj;
 };
 
-// const bar = style => {
-//   let styleObj = {
-//     width: style.width || "20px",
-//     height: style.height || "3px",
-//     backgroundColor: style.backgroundColor || "white",
-//     margin: style.margin || "3px 0"
-//   };
-//   return styleObj;
-// };
-
 export { menuBody, close, menuButton, bar };
