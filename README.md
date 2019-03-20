@@ -39,7 +39,7 @@ class App extends React.Component {
         {this.state.showUserMenu ? (
           <EB comp="UserMenu in User.js">
             <>
-              <MyMenu
+              <Menu
                 showMenu={this.state.showUserMenu}
                 closeHandler={this.toggleUserMenu}
                 style={{
@@ -61,7 +61,7 @@ class App extends React.Component {
                   borderWidth: "2px"
                 }}
               >
-                <UserMenu
+                <MyMenu
                   showUserMenu={this.toggleUserMenu}
                   style={{
                     //these are all the style options and their default settings.
