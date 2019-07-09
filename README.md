@@ -42,24 +42,15 @@ class App extends React.Component {
               <Menu
                 showMenu={this.state.showUserMenu}
                 closeHandler={this.toggleUserMenu}
-                style={{
-                //these are all the style options and their default settings.
-                //you can specify as many as needed or none at all.
-                  backgroundColor: "lightgrey",
-                  height: "200px",
-                  width: "250px",
-                  zIndex: "10",
-                  transition: "0.15s",
-                  margin: "0px",
-                  padding: "5px",
-                  height: "100px",
-                  color: "black",
-                  backgroundColor: "grey",
-                  borderRadius: "5px",
-                  borderColor: "black",
-                  borderStyle: "solid",
-                  borderWidth: "2px"
-                }}
+                style={
+                  // insert a style object here
+                  // that follows this structure.
+                  // the menu will respond accordingly
+                  // const style = {
+                        open: {[properties...]},
+                        closed: {[properties...]}
+                  }
+                }
               >
                 <UserMenu
                   showUserMenu={this.toggleUserMenu}

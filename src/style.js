@@ -1,26 +1,11 @@
 const menuBody = (style, showMenu) => {
-	var changeWidth
+	var styleObj
 	if (showMenu === true) {
-		changeWidth = style.width || '30%'
+		styleObj = style.open
 	} else {
-		changeWidth = '0%'
+		styleObj = style.closed
 	}
-	let styleObj = {
-		zIndex: style.zIndex || '10',
-		transition: style.transition || '0.15s',
-		transitionProperty: 'width',
-		position: 'relative',
-		margin: style.margin || '0px',
-		padding: style.padding || '5px',
-		width: changeWidth,
-		height: style.height || '100px',
-		color: style.color || 'black',
-		backgroundColor: style.backgroundColor || 'white',
-		borderRadius: style.borderRadius || '5px',
-		borderColor: style.borderColor || 'black',
-		borderStyle: style.borderStyle || 'solid',
-		borderWidth: style.borderWidth || '2px'
-	}
+
 	return styleObj
 }
 
