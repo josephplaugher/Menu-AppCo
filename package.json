@@ -1,6 +1,6 @@
 {
 	"name": "menu-appco",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "A styled closeable menu for React apps",
 	"main": "dist/bundle.js",
 	"files": [
