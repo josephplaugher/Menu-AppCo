@@ -39,7 +39,7 @@ class App extends React.Component {
         {this.state.showUserMenu ? (
           <EB comp="UserMenu in User.js">
             <>
-              <MyMenu
+              <Menu
                 showMenu={this.state.showUserMenu}
                 closeHandler={this.toggleUserMenu}
                 style={{
@@ -73,7 +73,6 @@ class App extends React.Component {
                   closeHandler={this.toggleUserMenu}
                   logout={this.props.logout}
                   user={this.props.user}
-                  updateSubscribed={this.props.updateSubscribed}
                 />
               </Menu>
             </>
