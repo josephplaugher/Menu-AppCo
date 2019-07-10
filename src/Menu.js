@@ -33,18 +33,13 @@ class Menu extends React.Component {
 
 		return (
 			<>
-				{this.props.showMenu ? (
-					<div
-						id='menu-appco_body'
-						style={menuBody(style, this.props.showMenu)}
-					>
-						<span style={close(closeStyle)} onClick={this.props.closeHandler}>
-							{closeIcon}
-						</span>
-						{this.props.children}{' '}
-						{/*there must be nested markup components passed in*/}
-					</div>
-				) : null}
+				<div id='menu-appco_body' style={menuBody(style, this.props.showMenu)}>
+					<span style={close(closeStyle)} onClick={this.props.closeHandler}>
+						{closeIcon}
+					</span>
+					{this.props.children}{' '}
+					{/*there must be nested markup components passed in*/}
+				</div>
 			</>
 		)
 	}

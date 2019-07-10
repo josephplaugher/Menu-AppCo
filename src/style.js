@@ -1,12 +1,14 @@
 const menuBody = (style, showMenu) => {
-	var styleObj
+	var finalStyle
+	var initialStyle = style.closed
 	if (showMenu === true) {
-		styleObj = style.open
+		var openStyle = Object.assign({}, initialStyle, style.transition)
+		finalStyle = openStyle
 	} else {
-		styleObj = style.closed
+		finalStyle = initialStyle
 	}
 
-	return styleObj
+	return finalStyle
 }
 
 const close = (style) => {
